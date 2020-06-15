@@ -1,2 +1,3 @@
-rootProject.name='My Android App'
+include ':mytestlibrary'
 include ':app'
+rootProject.name = "SubModule App"
