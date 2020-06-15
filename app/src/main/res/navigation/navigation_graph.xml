@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.naveed.myandroidapp.view.ui.fragment.LoginFragment"
+        android:label="LOGIN"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_recyclerviewFragment"
+            app:destination="@id/recyclerviewFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment2"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recyclerviewFragment"
+        android:name="com.naveed.myandroidapp.view.ui.fragment.PopularTVShowsFragment"
+        android:label="TV Shows"
+        tools:layout="@layout/fragment_tvshows">
+        <action
+            android:id="@+id/action_recyclerviewFragment_to_favoriteFragment"
+            app:destination="@id/nav_favorites" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.naveed.myandroidapp.view.ui.fragment.RegistrationFragment"
+        android:label="REGISTRATION"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment2_to_recyclerviewFragment"
+            app:destination="@id/recyclerviewFragment" />
+        <action
+            android:id="@+id/action_registrationFragment2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.naveed.myandroidapp.view.ui.fragment.FavoriteFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_favoriteFragment_to_popularFragment"
+            app:destination="@id/nav_popular" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_popular"
+        android:name="com.naveed.myandroidapp.view.ui.fragment.PopularMoviesFragment"
+        android:label="Movies"
+        tools:layout="@layout/fragment_popular">
+        <action
+            android:id="@+id/action_nav_popular_to_popularMovieDetailFragment"
+            app:destination="@id/popularMovieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.naveed.myandroidapp.view.ui.fragment.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/popularMovieDetailFragment"
+        android:name="com.naveed.myandroidapp.view.ui.fragment.PopularMovieDetailFragment"
+        android:label="Movie Details" >
+        <action
+            android:id="@+id/action_popularMovieDetailFragment_to_nav_popular"
+            app:destination="@id/nav_popular" />
+    </fragment>
+</navigation>

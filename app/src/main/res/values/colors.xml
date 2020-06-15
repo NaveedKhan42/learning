@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>-->
+    <!--<color name="colorBlack">#999900</color>-->
+
+    <!--Defining Custom color pallete -->
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorAccent">#E6EE9C</color>
+    
+    <color name="colorOptionsMenuBG">#81D4FA</color>
+
+    <color name="colorSecondary">#B39DDB</color>
+
+    <color name="colorText">#01579B</color>
+
+</resources>
